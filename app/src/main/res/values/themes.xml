@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Kadoin" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/red_light</item>
+        <item name="colorOnPrimaryContainer">@color/red_primary</item>
+        <item name="colorSecondary">@color/red_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/red_light</item>
+        <item name="colorOnSecondaryContainer">@color/red_primary</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Override Material3 bottom navigation colors -->
+        <item name="colorSurfaceVariant">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/gray_text</item>
+    </style>
+
+    <style name="Theme.Kadoin" parent="Base.Theme.Kadoin" />
+
+    <style name="Theme.Kadoin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="150dp"
+    android:height="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="150">
+  
+  <!-- Background -->
+  <path
+      android:pathData="M0,0 L150,0 L150,150 L0,150 Z"
+      android:fillColor="#F5F5F5"/>
+  
+  <!-- Perfume Bottle -->
+  <path
+      android:pathData="M55,50 L95,50 Q100,50 100,55 L100,125 Q100,130 95,130 L55,130 Q50,130 50,125 L50,55 Q50,50 55,50 Z"
+      android:fillColor="#E91E63"/>
+  
+  <!-- Perfume Cap -->
+  <path
+      android:pathData="M60,35 L90,35 Q93,35 93,38 L93,52 Q93,55 90,55 L60,55 Q57,55 57,52 L57,38 Q57,35 60,35 Z"
+      android:fillColor="#C2185B"/>
+  
+  <!-- Perfume Spray -->
+  <path
+      android:pathData="M71,25 L79,25 Q83,25 83,29 L83,36 Q83,40 79,40 L71,40 Q67,40 67,36 L67,29 Q67,25 71,25 Z"
+      android:fillColor="#AD1457"/>
+  
+  <!-- Label -->
+  <path
+      android:pathData="M60,80 L90,80 Q92,80 92,82 L92,93 Q92,95 90,95 L60,95 Q58,95 58,93 L58,82 Q58,80 60,80 Z"
+      android:fillColor="#FFFFFF"/>
+      
+</vector>

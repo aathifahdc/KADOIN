@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="150dp"
+    android:height="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="150">
+  
+  <!-- Background -->
+  <path
+      android:pathData="M0,0 L150,0 L150,150 L0,150 Z"
+      android:fillColor="#F5F5F5"/>
+  
+  <!-- Watch Circle -->
+  <path
+      android:pathData="M75,25 A50,50 0 1,1 74.99,25 Z"
+      android:fillColor="#2196F3"
+      android:strokeColor="#1976D2"
+      android:strokeWidth="3"/>
+  
+  <!-- Watch Face -->
+  <path
+      android:pathData="M75,35 A40,40 0 1,1 74.99,35 Z"
+      android:fillColor="#FFFFFF"/>
+  
+  <!-- Hour Hand -->
+  <path
+      android:pathData="M73.5,50 L76.5,50 L76.5,75 L73.5,75 Z"
+      android:fillColor="#333333"/>
+  
+  <!-- Minute Hand -->
+  <path
+      android:pathData="M74,40 L76,40 L76,75 L74,75 Z"
+      android:fillColor="#333333"/>
+  
+  <!-- Center Dot -->
+  <path
+      android:pathData="M75,72 A3,3 0 1,1 74.99,72 Z"
+      android:fillColor="#333333"/>
+      
+</vector>

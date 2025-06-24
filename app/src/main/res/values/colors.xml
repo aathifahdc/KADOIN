@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna Utama -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1C1C1E</color>
+    <color name="red_primary">#E53935</color>         <!-- Warna tombol & harga -->
+    <color name="red_secondary">#FF6B6B</color>        <!-- Warna kontainer aksen -->
+    <color name="red_light">#FFE5E5</color>            <!-- Warna latar badge -->
+
+    <!-- Warna Pelengkap -->
+    <color name="pink_light">#FCE4EC</color>           <!-- Background lembut badge -->
+    <color name="gray_text">#666666</color>            <!-- Untuk teks sekunder -->
+    <color name="background_gray">#F5F5F5</color>       <!-- Background layout atau kartu -->
+    <color name="divider">#E0E0E0</color>              <!-- Garis pemisah list/section -->
+
+    <!-- Warna Tambahan Navigasi -->
+    <color name="nav_selected">#E53935</color>         <!-- Ikon bottom nav aktif -->
+    <color name="nav_unselected">#9E9E9E</color>       <!-- Ikon bottom nav tidak aktif -->
+    <color name="gray_light">#C4C4C4</color>           <!-- Warna icon/border lembut -->
+
+    <!-- Warna Favorit dan Badge -->
+    <color name="favorite_red">#FF3B30</color>         <!-- Ikon hati -->
+    <color name="badge_background">#FFEBEE</color>     <!-- Badge latar -->
+
+    <!-- Material Design Support (fallback / opsional) -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+</resources>

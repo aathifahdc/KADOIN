@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KADOIN</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_search">Cari</string>
+    <string name="title_kado">Kado</string>
+    <string name="title_favorite">Favorit</string>
+    <string name="title_profile">Profil</string>
+</resources>
