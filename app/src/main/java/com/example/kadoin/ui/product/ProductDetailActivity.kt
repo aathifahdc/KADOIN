@@ -1,5 +1,7 @@
 package com.example.kadoin.ui.product
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,7 +34,6 @@ class ProductDetailActivity : AppCompatActivity() {
     }
 
     private fun setupProductDetails() {
-        // Get data from intent
         val productName = intent.getStringExtra(EXTRA_PRODUCT_NAME) ?: "Kotak Kado Premium dengan Pita Elegan"
         val productPrice = intent.getStringExtra(EXTRA_PRODUCT_PRICE) ?: "Rp 189.000"
         val productImage = intent.getStringExtra(EXTRA_PRODUCT_IMAGE) ?: "gift_1"
@@ -40,23 +41,19 @@ class ProductDetailActivity : AppCompatActivity() {
         val productReviews = intent.getStringExtra(EXTRA_PRODUCT_REVIEWS) ?: "(125)"
         val originalPrice = intent.getStringExtra(EXTRA_PRODUCT_ORIGINAL_PRICE) ?: ""
 
-        // Set product details
         binding.tvProductName.text = productName
         binding.tvProductPrice.text = productPrice
         binding.tvProductRating.text = productRating.toString()
         binding.tvProductReviews.text = productReviews
 
-        // Set original price if available
         if (originalPrice.isNotEmpty()) {
             binding.tvOriginalPrice.text = originalPrice
             binding.tvOriginalPrice.visibility = android.view.View.VISIBLE
-            // Add strikethrough effect
             binding.tvOriginalPrice.paintFlags = binding.tvOriginalPrice.paintFlags or android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
         } else {
             binding.tvOriginalPrice.visibility = android.view.View.GONE
         }
 
-        // Set product image
         val imageRes = when (productImage) {
             "smartphone_premium" -> R.drawable.iphone_promax
             "headphone_wireless" -> R.drawable.headphone
@@ -73,12 +70,10 @@ class ProductDetailActivity : AppCompatActivity() {
         }
         binding.ivProductImage.setImageResource(imageRes)
 
-        // Set product description
         binding.tvProductDescription.text = "Kotak kado premium dengan desain elegan dan pita berkualitas tinggi. Sempurna untuk berbagai momen spesial seperti ulang tahun, anniversary, dan acara penting lainnya. Dibuat dengan bahan berkualitas tinggi yang tahan lama dan memberikan kesan mewah pada hadiah Anda."
     }
 
     private fun setupRecommendations() {
-        // Setup related products
         val recommendations = listOf(
             GiftItem("gift_1", "Jam Tangan Mewah Exclusive", "Rp 1.250.000", 4.7f, "(45)"),
             GiftItem("gift_2", "Set Lilin Aromaterapi Premium", "Rp 215.000", 4.9f, "(87)"),
@@ -86,7 +81,7 @@ class ProductDetailActivity : AppCompatActivity() {
         )
 
         val adapter = GiftAdapter(recommendations) { gift ->
-            // Handle recommendation click - could open another product detail
+            // Handle recommendation click - bisa membuka detail produk baru
         }
 
         binding.rvRecommendations.apply {
@@ -101,8 +96,6 @@ class ProductDetailActivity : AppCompatActivity() {
         }
 
         binding.btnFavorite.setOnClickListener {
-            // Handle add to favorite
-            // Toggle favorite icon
             val currentIcon = binding.btnFavorite.drawable
             if (currentIcon.constantState == getDrawable(R.drawable.ic_favorite_border)?.constantState) {
                 binding.btnFavorite.setImageResource(R.drawable.ic_favorite_24)
@@ -111,15 +104,26 @@ class ProductDetailActivity : AppCompatActivity() {
             }
         }
 
-        // Tombol kunjungi toko
+        // Tombol Kunjungi Toko
         binding.btnVisitStore.setOnClickListener {
-            // Handle visit store - bisa buka browser atau activity toko
-            // Misalnya buka WhatsApp atau website toko
+            val productImage = intent.getStringExtra(EXTRA_PRODUCT_IMAGE)
+            val url = when (productImage) {
+                "smartphone_premium" -> "https://id.shp.ee/ANwLzii"
+                // Tambahkan produk lain jika diperlukan:
+                // "headphone_wireless" -> "https://..."
+                else -> null
+            }
+
+            if (url != null) {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(intent)
+            } else {
+                // Optional: tampilkan pesan jika link belum tersedia
+                // Toast.makeText(this, "Link belum tersedia untuk produk ini", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        // Description button
         binding.btnDescription.setOnClickListener {
-            // Scroll to description section
             binding.scrollView.smoothScrollTo(0, binding.tvDescriptionTitle.top)
         }
     }

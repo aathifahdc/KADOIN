@@ -9,4 +9,5 @@ data class GiftItem(
     val discount: String = "",
     val originalPrice: String = "",
     val sold: String = ""
+
 )

@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="185dp"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -17,21 +17,21 @@
             android:id="@+id/iv_trending_image"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@color/background_gray"
             android:scaleType="centerCrop"
-            android:src="@drawable/tws"
-            android:background="@color/background_gray" />
+            android:src="@drawable/tws" />
 
         <TextView
             android:id="@+id/tv_trending_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="TWS Earbuds Noise Cancelling"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:ellipsize="end"
             android:maxLines="2"
-            android:ellipsize="end" />
+            android:text="TWS Earbuds Noise Cancelling"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_trending_price"
@@ -39,9 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Rp 199.000"
+            android:textColor="@color/red_primary"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/red_primary" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
